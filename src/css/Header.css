@@ -1,0 +1,21 @@
+header{
+  display: flex;
+  justify-content: center;
+  background: var(--color-accent);
+}
+
+.header__wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap:0 20px;
+  padding:10px 20px;
+  width: 100%;
+}
+
+@media(min-width:767px){
+  .header__wrapper{
+    justify-content: space-between;
+  }
+}

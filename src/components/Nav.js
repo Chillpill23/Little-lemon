@@ -1,5 +1,6 @@
 import { mainLinks } from '../constants/Links';
 import { Scroll } from "../utils/Scroll";
+import '../css/Nav.css'
 
 const Nav = () => {
   return(
@@ -8,7 +9,7 @@ const Nav = () => {
         return(
           <li>
             <a 
-              className="nav-link"
+              className="nav__link"
               key={link.name} 
               title={link.title} 
               href={link.url}

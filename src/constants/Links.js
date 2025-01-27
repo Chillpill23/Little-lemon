@@ -20,7 +20,7 @@ export const mainLinks = [
     title:'Reservation'
   },
   {
-    name: 'OnlinOrders',
+    name: 'Online Orders',
     url: '/OnlineOrders',
     title:'Online Orders'
   },
