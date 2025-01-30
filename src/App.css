@@ -24,6 +24,7 @@
   --color-primary-light:#fbb9a7;
   --color-secondary:#FFF0DC;
   --color-accent:#131111;
+  --color-accent-light:#cfcfcf;
   --color-bg: #efefef;
 
   --border-radius: 4px;
@@ -70,6 +71,10 @@ p{
   font-size: var(--font-xs);
 }
 
+.highlight{
+  color:var(--color-primary);
+}
+
 section{
   margin:40px 0;
   padding:20px 40px;
@@ -98,7 +103,13 @@ section{
   font-size: var(--font-s);
   padding: 8px 16px;
   margin:1rem 0;
+  cursor: pointer;
 }
+
+.cta:disabled{
+  background-color: var(--color-primary-light);
+}
+
 
 @media(min-width:767px){
   section{
@@ -108,5 +119,6 @@ section{
 
   .cta{
     margin:1.5rem 0;
+    padding: 12px 24px;
   }
 }
