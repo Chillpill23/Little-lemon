@@ -5,14 +5,14 @@
   --font-xxxl:clamp(2.8rem, 7vw, 6rem); /* Base: 45px, Max: 61px */
   --font-xxl:clamp(2.5rem, 5vw, 3.815rem); /* Base: 40px, Max: 61px */
   --font-xl:clamp(2rem, 4.5vw, 3.052rem); /* Base: 32px, Max: 48.8px */
-  --font-l:clamp(1.8rem, 3.8vw, 2.141rem); /* Base: 24px, Max: 39px */
-  --font-m:clamp(1.1rem, 3vw, 1.953rem); /* Base: 20px, Max: 31.25px */
-  --font-s:clamp(1rem, 2vw, 1.3rem); /* Base: 16px, Max: 25px */
+  --font-l:clamp(1.6rem, 3.3vw, 2.141rem); /* Base: 24px, Max: 39px */
+  --font-m:clamp(1.3rem, 3vw, 1.653rem); /* Base: 20px, Max: 31.25px */
+  --font-s:clamp(1rem, 2vw, 1.2rem); /* Base: 16px, Max: 25px */
   --font-xs:clamp(0.9rem, 1.5vw, 1.1rem); /* Base: 14px, Max: 16px */
 
   --font-color-main:#5E5E5E;
   --font-color-dark:#131010;
-  --font-color-light:#7a7a7a;
+  --font-color-light:#747474;
   --font-color-lighter:#cecece;
   --font-color-white:#ececec;
 
@@ -21,8 +21,10 @@
   --font-weight-s:400;
 
   --color-primary:#cc5636;
+  --color-primary-light:#fbb9a7;
   --color-secondary:#FFF0DC;
-  --color-accent:#302a2a;
+  --color-accent:#131111;
+  --color-bg: #efefef;
 
   --border-radius: 4px;
   --box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -33,6 +35,9 @@
   transition:0.2s ease all;
   box-sizing: border-box;
   font-family: var(--font-main);
+}
+
+a{
   color:var(--font-color-dark);
 }
 
@@ -66,7 +71,8 @@ p{
 }
 
 section{
-  margin:40px 10px
+  margin:40px 0;
+  padding:20px 40px;
 }
 
 .container{
@@ -96,10 +102,11 @@ section{
 
 @media(min-width:767px){
   section{
-    margin:40px;
+    margin:80px 0;
+    padding:30px 40px;
   }
 
   .cta{
-    margin:1rem 0;
+    margin:1.5rem 0;
   }
 }

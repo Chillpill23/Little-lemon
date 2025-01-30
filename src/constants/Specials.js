@@ -6,22 +6,22 @@ export const Specials = [
   {
     name: 'Greek Salad',
     img:greekSalad,
-    desc:'The Famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese garnished with crunchy garlic and rosemary croutons',
+    desc:'Chicago style feta cheese garnished with crunchy garlic and rosemary croutons',
     alt:'Greek Salad image',
     price: 12.99
   },
   {
     name: 'Bruchetta',
     img:bruchetta,
-    desc:'Our Bruchetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil',
+    desc:'Grilled bread smeared with garlic and seasoned with salt and olive oil',
     alt:'Bruchetta Image',
     price: 5.99
   },
   {
     name: 'Lemon Dessert',
     img:lemonDessert,
-    desc:'This comes straight from grandmas recipe book every last ingredient is sourced and as authentic as can be imagined',
+    desc:'Straight from grandma\'s recipe book every last ingredient is as authentic as can be imagined',
     alt:'Lemon Dessert Image',
-    price: 5.00
+    price: 5.09
   },
 ]

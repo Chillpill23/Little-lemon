@@ -5,6 +5,24 @@ import {Testimonials} from '../constants/Testimonials'
 import aboutA from '../images/about-1.jpg'
 import aboutB from '../images/about-2.jpg'
 import '../css/Main.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+
+
+const StarRating = ({rating, maxStars = 5}) =>{
+  const stars = Array.from({length: maxStars}, (_, index) => index + 1);
+  console.log(`${rating}`)
+  
+  return(
+    <div>
+      {stars.map(star => {
+        return(
+          <FontAwesomeIcon key={star} icon={faStar} className={star <= rating ? 'star active' : 'star'}/>
+        )
+      })}
+    </div>
+  )
+} 
 
 const Main = () => {
   return(
@@ -22,7 +40,7 @@ const Main = () => {
           <div className="hero__image">
             <picture>
               <source srcSet={heroD} media='(min-width:767px)'/>
-              <img src={heroM} alt="Reserve a Table hero image"/>
+              <img src={heroM} alt="Reserve a Table hero"/>
             </picture>
           </div>
         </div>
@@ -63,7 +81,9 @@ const Main = () => {
             {Testimonials.map(t => {
                 return(
                   <article className='testimonial'>
-                  <div className='testimonial__rating'>{t.rating}</div>
+                  <div className='testimonial__rating'>
+                    <StarRating rating={t.rating} />
+                  </div>
                   <div className='testimonial__info'>
                     <img src={t.img} alt='Reviewer' /> 
                     <h5>{t.name}</h5>
@@ -80,9 +100,8 @@ const Main = () => {
         <div className="about__wrapper container">
           <div className="about__content">
             <h2>Little lemon</h2>
-            <h4>Chicago</h4>
             <p>
-              Lorem Ipsum sit dolor amet, Lorem Ipsum sit dolor amet,Lorem Ipsum sit dolor amet, Lorem Ipsum sit dolor amet,Lorem Ipsum sit dolor amet, Lorem Ipsum sit dolor amet
+              We take pride in crafting delicious dishes using the freshest ingredients, sourced locally whenever possible. Our menu is a celebration of flavors, blending traditional recipes with modern culinary creativity to delight your taste buds.
             </p>
           </div>
 
