@@ -1,33 +1,39 @@
 export const mainLinks = [
   {
-    name:"Home",
+    name:"home",
     url:"",
-    title:'Home'
+    title:'Home',
+    type:'page'
   },
   {
-    name: 'About',
+    name: 'about',
     url: 'about',
-    title:'Home'
+    title:'about',
+    type:'section'
   },
   {
-    name: 'Menu',
+    name: 'menu',
     url: 'menu',
-    title:'Menu'
+    title:'Menu',
+    type:'section'
   },
   {
-    name: 'Reservation',
-    url: 'reservation',
-    title:'Reservation'
+    name: 'reservation',
+    url: '/Reservation',
+    title:'Reservation',
+    type:'page'
   },
   {
-    name: 'Online Orders',
+    name: 'online Orders',
     url: '/OnlineOrders',
-    title:'Online Orders'
+    title:'Online Orders',
+    type:'page'
   },
   {
-    name: 'Login',
+    name: 'login',
     url: '/Login',
-    title:'Login'
+    title:'Login',
+    type:'page'
   },
 ]
 

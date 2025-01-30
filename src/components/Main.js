@@ -1,18 +1,16 @@
 import heroM from '../images/hero-m.jpg'
 import heroD from '../images/hero-d.jpg'
-import {Specials} from '../constants/Specials'; 
-import {Testimonials} from '../constants/Testimonials'
 import aboutA from '../images/about-1.jpg'
 import aboutB from '../images/about-2.jpg'
-import '../css/Main.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import {Specials} from '../constants/Specials'; 
+import {Testimonials} from '../constants/Testimonials'
+import '../css/Main.css'
 
 
 const StarRating = ({rating, maxStars = 5}) =>{
   const stars = Array.from({length: maxStars}, (_, index) => index + 1);
-  console.log(`${rating}`)
-  
   return(
     <div>
       {stars.map(star => {
@@ -27,7 +25,7 @@ const StarRating = ({rating, maxStars = 5}) =>{
 const Main = () => {
   return(
     <main>
-      <section className="hero">
+      <section id='hero' className="hero">
         <div className="hero__wrapper">
           <div className="hero__content">
             <h4 className='subtitle hero__content--subtitle'>Little Lemon</h4>
@@ -46,7 +44,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="menu">
+      <section id='menu' className="menu">
         <div className="menu__wrapper container">
           <div className='menu__header'>
             <h2 className='section--title'>Specials</h2>
@@ -72,7 +70,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="testimonials">
+      <section id='testimonials' className="testimonials">
         <div className="testimonial__wrapper container">
           <div className='testimonial__header'>
             <h2 className='section--title'>Testimonials</h2>
@@ -96,12 +94,14 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="about">
+      <section id='about' className="about">
         <div className="about__wrapper container">
           <div className="about__content">
             <h2>Little lemon</h2>
             <p>
-              We take pride in crafting delicious dishes using the freshest ingredients, sourced locally whenever possible. Our menu is a celebration of flavors, blending traditional recipes with modern culinary creativity to delight your taste buds.
+              We take pride in crafting delicious dishes using the freshest ingredients, 
+              sourced locally whenever possible. Our menu is a celebration of flavors, 
+              blending traditional recipes with modern culinary creativity to delight your taste buds.
             </p>
           </div>
 
