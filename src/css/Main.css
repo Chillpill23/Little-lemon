@@ -11,6 +11,7 @@
 /* Hero section */
 .hero{
   margin: 0 0 40px 0;
+  padding:0;
 }
 
 .hero__wrapper{
@@ -79,13 +80,14 @@
 
 .menu__items{
   display:flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap:20px;
 }
 
 .menu__item{
   box-shadow: var(--box-shadow);
   border-radius: 12px;
+  width: 100%;
 }
 
 .menu__item__wrapper{
@@ -124,6 +126,7 @@
 
 .menu__item__pTitle{
   font-family: var(--font-sub);
+  font-weight: var(--font-weight-s);
 }
 
 .menu__item__content > p{
@@ -138,6 +141,7 @@
 
 .testimonials{
   display: flex;
+  background-color: var(--color-bg);
 }
 
 .testimonial__wrapper{
@@ -154,7 +158,7 @@
   display:flex;
   width: 100%;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -163,10 +167,15 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  text-align: center;
 }
 
-.testimonial__rating{
+.star path{
+  color:var(--color-primary-light)
+}
 
+.star.active path{
+  color:var(--color-primary)
 }
 
 .testimonial__info{
@@ -178,7 +187,8 @@
 }
 
 .testimonial__info > img{
-  width:50%;
+  width:60%;
+  border-radius: 12px;
 }
 
 /* About section */
@@ -196,7 +206,15 @@
 
 .about__content{
   flex:5;
+  padding:20px;
+  text-align: center;
 }
+
+.about__content h2{
+ font-family: var(--font-sub);
+ font-size: var(--font-xxl);
+}
+
 
 .about__image{
   flex:7;
@@ -237,10 +255,6 @@
   }
 
   /* Menu section */
-  .menu__items{
-    flex-direction: row;
-  }
-
   .menu__item{
     flex:4;
   }
@@ -259,20 +273,10 @@
   .testimonial__header{
     text-align: left;
   }
-  
-  .testimonials__review{
-    flex-direction: row;
-  }
-  
 
   .testimonial{
     flex:4;
     padding:10px;
-  }
-
-  .testimonial__info> img{
-    width:50%;
-    max-width: 100px;
   }
 
   /* About */
@@ -280,6 +284,11 @@
   .about__wrapper{
     flex-direction: row;
   }  
+
+  
+  .about__content{
+    text-align: left;
+  }
 }
 
 @media(min-width:992px){
@@ -293,4 +302,8 @@
   .menu__item__content{
     padding:20px;
   }
+
+  .hero__cta{
+    margin: 2rem 0;
+  }  
 }
