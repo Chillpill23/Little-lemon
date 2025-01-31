@@ -27,7 +27,7 @@ const BookingForms = ({availableTime, updateAvailableTime, fetch, onSubmit}) => 
         if (!value) message = "Please select a time.";
         break;
       case "guest":
-        if (value < 1 || value > 10) message = "Guests must be between 1 and 10.";
+        if (value < 2 || value > 10) message = "Guests must be between 2 and 10.";
         break;
       case "occasion":
         if (!value) message = "Please select an occasion.";
@@ -62,7 +62,7 @@ const BookingForms = ({availableTime, updateAvailableTime, fetch, onSubmit}) => 
       user.name.length >=3
       && user.date
       && user.time
-      && user.guest >= 1
+      && user.guest >= 2
       && user.guest <= 10
       && user.occasion
     ) return true;
@@ -91,7 +91,7 @@ const BookingForms = ({availableTime, updateAvailableTime, fetch, onSubmit}) => 
       <h2>Online Reservation</h2>
       <h5>Booking request  <span className='highlight'>+63 (975) 1432 703 </span> or fill out the order form</h5>
       <div className='booking__wrapper'>
-        <form className='booking__form' onSubmit={handleSubmit}>
+        <form className='booking__form' onSubmit={handleSubmit} role="form" aria-labelledby="Table reservation">
 
           <div className="field">
             <label>Name</label>
