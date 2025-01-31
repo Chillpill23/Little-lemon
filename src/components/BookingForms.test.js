@@ -1,6 +1,6 @@
 import BookingForms from "./BookingForms";
 import Reservation from "./Reservation";
-import {render, screen} from "@testing-library/react"
+import {render, screen, fireEvent, waitFor} from "@testing-library/react"
 import { initializeTimes, availableTimesReducer }  from "./Reservation"
 
 const availableTimes = ['17:00', '17:30'];
@@ -30,3 +30,6 @@ test("updateTimes returns the same value provided in the state" , () =>{
 
   expect(result).toEqual(newTimes);
 })
+
+
+
