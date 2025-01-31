@@ -1,7 +1,7 @@
 import '../css/BookingForms.css'
 import { useState } from 'react'
 
-const BookingForms = ({availableTime, updateAvailableTime}) => {
+const BookingForms = ({availableTime, updateAvailableTime, fetch, onSubmit}) => {
   
   const [user, setUser] = useState({
     name:'',
@@ -50,7 +50,7 @@ const BookingForms = ({availableTime, updateAvailableTime}) => {
     }))
 
     if(name == 'date'){
-      const newAvailableTime = ['1:00', '2:00'];
+      const newAvailableTime = fetch(new Date(value));
       updateAvailableTime(newAvailableTime)
     }
 
@@ -81,7 +81,7 @@ const BookingForms = ({availableTime, updateAvailableTime}) => {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-
+      onSubmit(user);
       clearForm();
   }
 
@@ -106,8 +106,8 @@ const BookingForms = ({availableTime, updateAvailableTime}) => {
           </div>
 
           <div className="field">
-            <label>Choose a Time</label>
-            <select name='time' value={user.time} id='res-time' onChange={handleChange}>
+            <label htmlFor='res-time'>Choose a Time</label>
+            <select name='time' value={user.time} id='res-time' onChange={handleChange} data-testid="time-select">
               {availableTime.map((time, index) => {
                 return (
                   <option key={index} value={time}>{time}</option>
@@ -125,14 +125,14 @@ const BookingForms = ({availableTime, updateAvailableTime}) => {
 
           <div className="field">
             <label>Occassion</label>
-            <select name='occasion' value={user.occasion} onChange={handleChange} id='occasion'> 
+            <select name='occasion' value={user.occasion} onChange={handleChange} id='occasion' data-testid='occasion-select'> 
               <option>Birthday</option>
               <option>Anniversary</option>
             </select>
             {errors.occasion && <span className='error'> {errors.occasion}</span>}
           </div>
 
-          <input className='cta' type='submit' value='Reserve a table' disabled={!isFormValid()}/>
+          <input className='cta' role='button' type='submit' value='Reserve a table' disabled={!isFormValid()}/>
         </form>
       </div>
     </div>
