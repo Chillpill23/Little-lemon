@@ -44,11 +44,30 @@
   border-bottom: 1px solid var(--color-accent-light);
   padding: 10px;
   text-transform: capitalize;
+  font-size: var(--font-s);
+  color:var(--font-color-light);
 }
 
-.field input::placeholder{
+::placeholder{
   color:var(--font-color-light);
-  font-size:var(--font-xs)
+  font-size:var(--font-xs);
+  text-transform: uppercase;
+}
+
+
+.confirmed{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  gap: 20px;
+  text-align: center;
+}
+
+.confirmed__icon{
+  color: green;
+  height: 3rem;
 }
 
 @media(min-width:767px){
