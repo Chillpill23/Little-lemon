@@ -1,7 +1,7 @@
 import '../css/BookingForms.css'
 import { useState } from 'react'
 
-const BookingForms = () => {
+const BookingForms = ({availableTime, updateAvailableTime}) => {
   
   const [user, setUser] = useState({
     name:'',
@@ -10,15 +10,6 @@ const BookingForms = () => {
     guest:1,
     occasion:'',
   })
-
-  const [availableTime, setAvailableTime] = useState([
-    '17:00', 
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00'
-  ])
 
   const [errors, setErrors] = useState({});
 
@@ -57,6 +48,11 @@ const BookingForms = () => {
       ...prevUser,
       [name]:value,
     }))
+
+    if(name == 'date'){
+      const newAvailableTime = ['1:00', '2:00'];
+      updateAvailableTime(newAvailableTime)
+    }
 
     validateField(name, value);
   }
